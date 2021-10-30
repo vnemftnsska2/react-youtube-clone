@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  height: 4rem;
+  padding: .5rem 1rem;
+  background-color: black;
+  align-items: center;
+  color: red;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 2em;
+}
+
+.icon {
+  font-size: 2.5rem;
+  padding-top: .1em;
+  margin-right: .2em;
+}
+
+.searchInput {
+  flex-basis: 100%;
+  font-size: 1.3rem;
+  outline: 0;
+}
+
+.searchButton {
+  margin-left: .2em;
+  font-size: 1.2em;
+}
