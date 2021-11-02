@@ -1,12 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, memo } from 'react';
 import styles from './header.module.css'
 import { ImYoutube, ImSearch } from 'react-icons/im'
 
-const Header = ({ onSearch }) => {
+const Header = memo(({ onSearch }) => {
   const searchRef = useRef();
 
   const handleSearch = () => {
-    console.log('????');
     onSearch(searchRef.current.value);
   };
 
@@ -20,9 +19,14 @@ const Header = ({ onSearch }) => {
     }
   };
 
+  const handleReset = () => {
+    searchRef.current.value = '';
+    onSearch("");
+  }
+
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <div className={styles.logo} onClick={handleReset}>
         <ImYoutube className={styles.icon} />
         <h1>Youtube</h1>
       </div>
@@ -43,6 +47,6 @@ const Header = ({ onSearch }) => {
       </button>
     </header>
   );
-};
+});
 
 export default Header;

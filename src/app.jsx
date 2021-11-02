@@ -9,7 +9,12 @@ const App = ({ youtube }) => {
   const onSearch = useCallback((keyword) => {
     youtube
       .getSearchList(keyword)
-      .then(items => setVideos(items));
+      .then(items => {
+        setVideos(items.map(item => {
+          item.id = item.id.videoId;
+          return item;
+        }));
+      });
   }, [youtube]);
 
   useEffect(() => { // 값 변경 시 에만 Render 되도록 해주는 Hooks
