@@ -1,5 +1,5 @@
 .container {
-  padding: .2em;
+  padding: .3em;
   width: 25%;
 }
 
@@ -9,7 +9,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .container {
     width: 100%;
   }
@@ -20,6 +20,14 @@
   height: 100%;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  box-shadow: 3px 3px 5px 0px rgba(92, 90, 90, 0.53);
+  transition: transform 300ms ease-in;
+}
+
+.article:hover {
+  transform: scale(1.025);
 }
 
 .thumbnails {

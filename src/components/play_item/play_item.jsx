@@ -3,7 +3,7 @@ import styles from './play_item.module.css'
 
 
 const PlayItem = ({ video, video: { snippet } }) => {
-  console.log(video);
+  // console.log(video);
   return (
     <li className={styles.container}>
       <article className={styles.article}>

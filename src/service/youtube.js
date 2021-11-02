@@ -17,8 +17,12 @@ class Youtube {
   }
 
   //검색 영상 20
-  getSearchList() {
-
+  getSearchList(keyword) {
+    return fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=60&q=${keyword}&key=${this.key}`,
+      this.getRequestOptions
+    )
+      .then(response => response.json())
+      .then(result => result.items);
   }
 
 }
