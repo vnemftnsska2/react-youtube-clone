@@ -1,5 +1,12 @@
 .container {
   padding: .3em;
+}
+
+.list {
+  width: 100%;
+}
+
+.grid {
   width: 25%;
 }
 

@@ -4,6 +4,7 @@
   padding: .5rem 1rem;
   background-color: black;
   align-items: center;
+  margin-bottom: .5em;
   color: red;
 }
 
@@ -11,6 +12,7 @@
   display: flex;
   align-items: center;
   margin-right: 2em;
+  cursor: pointer;
 }
 
 .icon {
@@ -29,4 +31,5 @@
 .searchButton {
   margin-left: .2em;
   font-size: 1.7em;
+  cursor: pointer;
 }

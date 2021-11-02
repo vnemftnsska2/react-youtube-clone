@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './play_item.module.css'
 
 
-const PlayItem = ({ video, video: { snippet } }) => {
-  // console.log(video);
+const PlayItem = ({ video, video: { snippet }, onClickVideo, display }) => {
+  const displayType = display === 'list' ? styles.list : styles.grid;
   return (
-    <li className={styles.container}>
+    <li className={`${styles.container} ${displayType}`} onClick={() => onClickVideo(video)}>
       <article className={styles.article}>
         <img
           className={styles.thumbnails}
@@ -17,7 +17,7 @@ const PlayItem = ({ video, video: { snippet } }) => {
           <p className={styles.channel}># {snippet.channelTitle}</p>
         </div>
       </article>
-    </li>
+    </li >
   );
 }
 
